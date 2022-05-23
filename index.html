@@ -17,9 +17,10 @@
             <button type="submit">Aggiungi</button>
         </form>
         <div class="list">
-            <ul class="todos">
+            <ul class="todos" v-if="todos.length > 0">
                 <li v-for="(todo, index) in todos" :class="{active : todos[index].isDone === true}">{{todo.text}}<i class="fa-solid fa-check check" @click="doneTodo(index)"></i><i class="fa-solid fa-x x" @click="removeTodo(index)"></i></li>
             </ul>
+            <h2 v-else>Non ci sono todo</h2>
         </div>
     </div>
     <script src="js/main.js"></script>
