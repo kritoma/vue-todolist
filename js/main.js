@@ -30,6 +30,14 @@ const app = new Vue({
         },
         removeTodo(index) {
             this.todos.splice(index, 1)
-        }
+        },
+        doneTodo(index) {
+            if (this.todos[index].isDone === false) {
+                this.todos[index].isDone = true;
+            } else {
+                this.todos[index].isDone = false;
+            }
+            
+        },
     }
 });

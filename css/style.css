@@ -29,13 +29,19 @@ h1 {
     position: relative;
 }
 
-.list ul li i {
+.list ul li .x {
     position: absolute;
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
 }
 
+.list ul li .check {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+}
 
 .active {
     text-decoration: line-through;

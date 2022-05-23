@@ -18,7 +18,7 @@
         </form>
         <div class="list">
             <ul class="todos">
-                <li v-for="(todo, index) in todos">{{todo.text}}<i class="fa-solid fa-x" @click="removeTodo(index)"></i></li>
+                <li v-for="(todo, index) in todos" :class="{active : todos[index].isDone === true}">{{todo.text}}<i class="fa-solid fa-check check" @click="doneTodo(index)"></i><i class="fa-solid fa-x x" @click="removeTodo(index)"></i></li>
             </ul>
         </div>
     </div>
